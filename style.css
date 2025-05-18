@@ -303,6 +303,7 @@ body {
     position: relative;
     mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
     -webkit-mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+    z-index: 2; /* Increased z-index */
 }
 
 .slider .list {
@@ -803,9 +804,10 @@ body {
 
 .fotter {
     width: 100%;
-    height: 50vh;
+    height: auto;
     display: block;
     font-family: Bodoni MT, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;
+    padding-bottom: 20px;
 }
 
 .thanks {
@@ -813,8 +815,16 @@ body {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     background-color: transparent;
-    width: 100vh;
+    width: 100%;
     text-align: center;
+    padding-top: 10px;
+}
+
+.thanks h1{
+    font-size: 20px;
+}
+.thanks h2{
+    font-size: 16px;
 }
 
 .thanks span {
@@ -824,7 +834,18 @@ body {
     background-image: url(./img/white-blue.jpg);
     background-size: cover;
     background-clip: text;
-    font-size: 65px;
+    font-size: 3vw;
     color: transparent;
     animation: transparent, text-img 6s linear infinite;
+}
+@media screen and (max-width: 768px) {
+    .thanks h1{
+        font-size: 16px;
+    }
+    .thanks h2{
+        font-size: 12px;
+    }
+    .thanks span{
+        font-size: 5vw;
+    }
 }
