@@ -35,18 +35,13 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-
     background-color: black;
     backdrop-filter: blur(10px);
     height: 60px;
-
-    /* Curved bottom line */
     border-bottom: 2px solid aqua;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
-
-
 
 .logo {
     font-size: 25px;
@@ -92,8 +87,6 @@ body {
     text-shadow: 0 0 20px aqua;
 }
 
-
-
 .navbar a:hover::after {
     width: 100%;
 }
@@ -101,7 +94,6 @@ body {
 .navbar a.active {
     color: aqua;
     text-shadow: 0 0 20px aqua;
-
 }
 
 .home {
@@ -118,7 +110,6 @@ body {
 .home-content {
     margin-top: 0;
     max-width: 650px;
-
 }
 
 .home-content h3 {
@@ -138,7 +129,6 @@ body {
     animation: slidetop 1.5s ease forwards;
 }
 
-
 .home-content h3 span {
     color: aqua;
 }
@@ -149,7 +139,6 @@ body {
     opacity: 0;
     animation: slideright 0.5s ease forwards;
     text-shadow: 0 0 20px aqua;
-
 }
 
 .home-content p {
@@ -163,7 +152,6 @@ body {
     margin: 0;
     height: 100%;
     opacity: 0;
-
     animation: slideleft .5s ease forwards,
         flout 4s ease-in-out infinite;
 }
@@ -186,8 +174,6 @@ body {
     margin-top: 90px;
     box-shadow: 0 0 20px rgb(0, 255, 255);
 }
-
-
 
 .social {
     margin-top: 35px;
@@ -239,11 +225,9 @@ body {
     background-color: #1f242d;
     box-shadow: 0 0 20px rgb(0, 255, 255);
     text-shadow: 0 0 20px aqua;
-
 }
 
 @keyframes slideright {
-
     0% {
         transform: translateX(-100px);
         opacity: 0;
@@ -256,7 +240,6 @@ body {
 }
 
 @keyframes slideleft {
-
     0% {
         transform: translateX(100px);
         opacity: 0;
@@ -269,7 +252,6 @@ body {
 }
 
 @keyframes slidedown {
-
     0% {
         transform: translateY(-100px);
         opacity: 0;
@@ -282,7 +264,6 @@ body {
 }
 
 @keyframes slidetop {
-
     0% {
         transform: translateY(100px);
         opacity: 0;
@@ -295,14 +276,12 @@ body {
 }
 
 @keyframes flout {
-
     0% {
         transform: translateY(0px);
     }
 
     50% {
         transform: translateY(-24px);
-
     }
 
     100% {
@@ -311,14 +290,11 @@ body {
 }
 
 @keyframes text-img {
-
     to {
         background-position-x: -200px;
     }
 }
 
-/*home page finished / starts the between*/
-/* Slider Container */
 .slider {
     left: 13%;
     width: 70%;
@@ -329,14 +305,12 @@ body {
     -webkit-mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
 }
 
-/* Icon List Row */
 .slider .list {
     display: flex;
     min-width: calc(var(--width, 100px) * var(--quantity, 12));
     position: relative;
 }
 
-/* Each Icon Item */
 .slider .list .item {
     width: var(--width, 100px);
     height: var(--height, 100px);
@@ -350,7 +324,6 @@ body {
     justify-content: center;
 }
 
-/* Icon Style */
 .slider .item a {
     font-size: 40px;
     color: aqua;
@@ -359,14 +332,10 @@ body {
     cursor: default;
 }
 
-
-
-/* Reverse Scroll (Optional) */
 .slider[reverse="true"] .item {
     animation: reversePlay 40s linear infinite;
 }
 
-/* Animation Left to Right */
 @keyframes autoRun {
     from {
         left: 100%;
@@ -377,7 +346,6 @@ body {
     }
 }
 
-/* Animation Right to Left */
 @keyframes reversePlay {
     from {
         left: calc(var(--width, 100px) * -1);
@@ -388,16 +356,11 @@ body {
     }
 }
 
-
-
-/*finish the between | starts skills*/
-
-
 .skills {
     display: flexbox;
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -427,9 +390,7 @@ body {
     animation: transparent, text-img 6s linear infinite;
 }
 
-
 .card-container {
-    height: 100vh;
     top: 1%;
     position: relative;
     margin-left: 6%;
@@ -442,7 +403,6 @@ body {
     animation: slideleft 3s ease forwards;
 }
 
-/* Card styling */
 .card {
     position: relative;
     width: 220px;
@@ -460,7 +420,6 @@ body {
     overflow: hidden;
     padding: 20px;
     z-index: 0;
-    /* ensures stacking context for children */
 }
 
 .card:hover {
@@ -473,7 +432,6 @@ body {
     margin-top: 15px;
 }
 
-/* Show h3 always, position it above background */
 .card h3 {
     text-align: center;
     font-family: Bodoni MT, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;
@@ -491,7 +449,6 @@ body {
     transition: transform 0.5s ease;
 }
 
-/* Paragraph hidden by default, shows on hover */
 .card p {
     text-align: left;
     opacity: 0;
@@ -519,7 +476,6 @@ body {
     background-color: lightblue;
     transition: all 0.5s;
     z-index: 1;
-    /* CHANGED to make sure it's behind text */
 }
 
 .card::before {
@@ -550,21 +506,16 @@ body {
     transform: scale(0.9, 0.9);
 }
 
-/*skills finished / projects starts*/
-
-
 .projects {
     display: flexbox;
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Changed to column */
     align-items: center;
     padding: 0px 0% 0;
 }
-
-
 
 .projects-title {
     text-align: center;
@@ -574,10 +525,11 @@ body {
     opacity: 0;
     animation: slideright .5s ease forwards,
         flout 4s ease-in-out infinite;
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-bottom: 40px;
 }
 
 .projects-title span {
@@ -589,22 +541,17 @@ body {
     background-clip: text;
     color: transparent;
     animation: transparent, text-img 6s linear infinite;
-
 }
 
 .projects-card-container {
-    height: 100vh;
-    width: 100vh;
-    left: 10%;
-    position: relative;
-    right: 30%;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-between;
+    gap: 20px;
+    justify-content: center;
     padding: 20px;
     opacity: 0;
     animation: slideright 3s ease forwards;
+    flex-direction: row; /* Changed to row */
 }
 
 .project-card {
@@ -629,7 +576,6 @@ body {
     border-width: 5px;
 }
 
-
 .card-content {
     z-index: 5;
     padding: 1em;
@@ -639,7 +585,6 @@ body {
     transform: translateY(75%);
     transition: transform 500ms ease;
 }
-
 
 .project-card:hover .card-content {
     transform: translateY(0%);
@@ -708,10 +653,6 @@ body {
     transition: filter 500ms ease;
 }
 
-
-/* finished projects | starts contact */
-
-
 .cantact {
     position: relative;
     width: 100%;
@@ -745,8 +686,6 @@ body {
     animation: text-img 6s linear infinite;
 }
 
-/* Removed invalid selector .Contact-title span — class is lowercase */
-
 .form-box {
     display: flex;
     flex-direction: column;
@@ -772,7 +711,6 @@ body {
     text-align: center;
 }
 
-/* Row layout */
 .form-row {
     display: flex;
     gap: 20px;
@@ -780,7 +718,6 @@ body {
     flex-wrap: wrap;
 }
 
-/* Input wrapper */
 .inputBox {
     position: relative;
     flex: 1;
@@ -789,7 +726,6 @@ body {
     margin-top: 10px;
 }
 
-/* Input and textarea */
 .inputBox input,
 .inputBox textarea {
     width: 100%;
@@ -814,7 +750,6 @@ body {
     border-bottom: 2px solid #ffffff;
 }
 
-/* Floating label */
 .inputBox span {
     position: absolute;
     left: 15px;
@@ -828,7 +763,6 @@ body {
     background: transparent;
 }
 
-/* Floating label effect */
 .inputBox input:focus~span,
 .inputBox input:valid~span,
 .inputBox textarea:focus~span,
@@ -867,15 +801,11 @@ body {
     border: 1px solid #00ffff;
 }
 
-
-/* finishes contact | starts footer */
-
 .fotter {
     width: 100%;
     height: 50vh;
     display: block;
     font-family: Bodoni MT, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;
-
 }
 
 .thanks {
@@ -883,9 +813,8 @@ body {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     background-color: transparent;
-    width: 100%;
+    width: 100vh;
     text-align: center;
-
 }
 
 .thanks span {
